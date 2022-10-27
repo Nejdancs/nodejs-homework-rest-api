@@ -26,7 +26,7 @@ const updateAvatar = async (req, res) => {
                 throw err;
             });
 
-        const avatarURL = path.join("public", "avatars", newName);
+        const avatarURL = path.join("avatars", newName);
 
         const updatedUser = await User.findOneAndUpdate(
             { _id: id },
